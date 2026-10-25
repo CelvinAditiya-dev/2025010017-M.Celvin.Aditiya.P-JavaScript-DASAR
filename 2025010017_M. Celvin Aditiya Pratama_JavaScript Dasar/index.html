@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Praktikum JavaScript Dasar</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="hero">
+    <p class="eyebrow">MODUL PRAKTIKUM 07</p>
+    <h1>JavaScript Dasar</h1>
+    <p>Variabel, tipe data, operator, percabangan, perulangan, fungsi, DOM, event, dan validasi.</p>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>Praktik 1–2: Console dan komentar</h2>
+      <p>Pesan contoh dikirim ke Console browser. Buka Developer Tools → Console untuk melihatnya.</p>
+      <button id="tampilConsole">Tampilkan pesan Console</button>
+      <p id="consoleStatus" class="result">Klik tombol untuk menjalankan contoh.</p>
+    </section>
+
+    <section class="panel">
+      <h2>Praktik 3–4: Variabel dan tipe data</h2>
+      <button id="ujiVariabel">Jalankan contoh variabel & tipe data</button>
+      <pre id="hasilVariabel" class="result"></pre>
+    </section>
+
+    <section class="panel">
+      <h2>Praktik 5–6: Input dan total belanja</h2>
+      <form id="formBelanja">
+        <label>Nama pelanggan
+          <input id="namaPelanggan" type="text" placeholder="Contoh: Celvin">
+        </label>
+        <label>Harga satuan (Rp)
+          <input id="hargaDasar" type="number" min="0" step="1" placeholder="35000">
+        </label>
+        <label>Jumlah
+          <input id="jumlahDasar" type="number" min="0" step="1" placeholder="4">
+        </label>
+        <button type="submit">Hitung total + diskon</button>
+      </form>
+      <p id="hasilBelanja" class="result">Diskon 10% diberikan jika subtotal minimal Rp100.000.</p>
+    </section>
+
+    <section class="panel">
+      <h2>Praktik 7: Status kelulusan</h2>
+      <label>Nilai (0–100)
+        <input id="nilai" type="number" min="-100" max="200" placeholder="Masukkan nilai">
+      </label>
+      <button id="cekNilai">Periksa nilai</button>
+      <p id="hasilNilai" class="result">Nilai minimal 60 dinyatakan lulus.</p>
+    </section>
+
+    <section class="panel">
+      <h2>Praktik 8: Aturan diskon toko online</h2>
+      <label>Subtotal (Rp)
+        <input id="subtotalDiskon" type="number" min="0" placeholder="180000">
+      </label>
+      <label>Status member
+        <select id="statusMember">
+          <option value="true">Member</option>
+          <option value="false">Bukan member</option>
+        </select>
+      </label>
+      <button id="cekDiskonMember">Hitung diskon</button>
+      <p id="hasilDiskonMember" class="result">Diskon 10% untuk subtotal minimal Rp200.000; jika tidak, member mendapat 5% untuk subtotal minimal Rp100.000.</p>
+    </section>
+
+    <section class="panel">
+      <h2>Praktik 9: Ongkos kirim</h2>
+      <label>Total belanja (Rp)
+        <input id="totalOngkir" type="number" min="0" placeholder="175000">
+      </label>
+      <label>Layanan pengiriman
+        <select id="layanan">
+          <option value="reguler">Reguler</option>
+          <option value="ekspres">Ekspres</option>
+          <option value="lainnya">Layanan tidak dikenal (uji validasi)</option>
+        </select>
+      </label>
+      <button id="cekOngkir">Hitung ongkir</button>
+      <p id="hasilOngkir" class="result">Reguler Rp10.000 dan ekspres Rp20.000. Reguler gratis untuk belanja minimal Rp150.000.</p>
+    </section>
+
+    <section class="panel">
+      <h2>Praktik 10: Perulangan dan nomor genap</h2>
+      <button id="jalankanLoop">Cetak nomor 1–10 dan nomor genap</button>
+      <pre id="hasilLoop" class="result"></pre>
+    </section>
+
+    <section class="panel">
+      <h2>Praktik 11–12: Array, total harga, dan pencarian produk</h2>
+      <button id="olahArray">Tampilkan daftar harga, total, dan produk di bawah Rp30.000</button>
+      <pre id="hasilArray" class="result"></pre>
+    </section>
+
+    <section class="panel">
+      <h2>Praktik 13–14: Fungsi belanja dan kategori pelanggan</h2>
+      <button id="ujiFungsi">Jalankan contoh fungsi</button>
+      <pre id="hasilFungsi" class="result"></pre>
+    </section>
+
+    <section class="panel">
+      <h2>Praktik 15: DOM, event, dan reset teks</h2>
+      <h3 id="judulDom">Judul Awal</h3>
+      <p id="pesanDom" class="result">Belum ada tindakan.</p>
+      <div class="actions">
+        <button id="ubahDom">Ubah teks</button>
+        <button id="resetDom" class="secondary">Reset</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Praktik 16: Kalkulator total langsung</h2>
+      <div class="form-grid">
+        <label>Harga (Rp)
+          <input id="hargaLangsung" type="number" min="0" placeholder="35000">
+        </label>
+        <label>Jumlah
+          <input id="jumlahLangsung" type="number" min="0" placeholder="3">
+        </label>
+      </div>
+      <button id="hitungLangsung">Hitung total</button>
+      <p id="hasilLangsung" class="result">Masukkan harga dan jumlah.</p>
+    </section>
+
+    <section class="panel">
+      <h2>Praktik 17: Validasi data pelanggan</h2>
+      <div class="form-grid">
+        <label>Nama
+          <input id="namaValidasi" type="text" placeholder="Nama lengkap">
+        </label>
+        <label>Email
+          <input id="emailValidasi" type="email" placeholder="nama@email.com">
+        </label>
+      </div>
+      <button id="kirimValidasi">Periksa data</button>
+      <p id="hasilValidasi" class="result">Nama dan email wajib diisi.</p>
+    </section>
+
+    <section class="panel highlight">
+      <h2>Mini-Proyek: Kalkulator Belanja</h2>
+      <p>Proyek ini mengikuti ketentuan modul: diskon 10% jika subtotal minimal Rp100.000; nama wajib diisi; harga tidak boleh negatif; jumlah minimal 1.</p>
+      <form id="formMini">
+        <label>Nama produk
+          <input id="namaProduk" type="text" placeholder="Contoh: Buku tulis">
+        </label>
+        <div class="form-grid">
+          <label>Harga satuan (Rp)
+            <input id="hargaMini" type="number" min="0" step="1" placeholder="50000">
+          </label>
+          <label>Jumlah
+            <input id="jumlahMini" type="number" min="1" step="1" placeholder="2">
+          </label>
+        </div>
+        <button type="submit">Hitung belanja</button>
+      </form>
+      <div id="hasilMini" class="result" aria-live="polite">Lengkapi data lalu tekan Hitung Belanja.</div>
+    </section>
+
+    <section class="panel">
+      <h2>Tantangan B: Daftar produk</h2>
+      <button id="tantanganProduk">Tampilkan analisis 5 produk</button>
+      <pre id="hasilTantanganProduk" class="result"></pre>
+    </section>
+
+    <section class="panel">
+      <h2>Tantangan C: Formulir pemesanan</h2>
+      <form id="formPemesanan">
+        <label>Nama pembeli
+          <input id="namaPembeli" type="text" placeholder="Nama pembeli">
+        </label>
+        <label>Produk
+          <input id="produkPesanan" type="text" placeholder="Nama produk">
+        </label>
+        <label>Jumlah
+          <input id="jumlahPesanan" type="number" min="1" step="1" placeholder="1">
+        </label>
+        <div class="actions">
+          <button type="submit">Buat ringkasan pesanan</button>
+          <button type="reset" class="secondary">Reset</button>
+        </div>
+      </form>
+      <p id="hasilPemesanan" class="result">Isi semua kolom untuk membuat ringkasan.</p>
+    </section>
+
+    <section class="panel">
+      <h2>Evaluasi Pemahaman</h2>
+      <ol class="answers">
+        <li><strong>Perbedaan HTML, CSS, dan JavaScript:</strong> HTML membangun struktur konten, CSS mengatur tampilan, sedangkan JavaScript mengolah data dan menambahkan perilaku/interaksi.</li>
+        <li><strong>Perbedaan let dan const:</strong> <code>let</code> digunakan jika nilai variabel akan diubah; <code>const</code> digunakan jika variabel tidak akan diberi nilai ulang.</li>
+        <li><strong>Mengapa prompt() perlu dikonversi?</strong> Nilai dari <code>prompt()</code> berupa string, sehingga perlu dikonversi dengan <code>Number()</code> sebelum perhitungan numerik.</li>
+        <li><strong>Perbedaan = dan ===:</strong> <code>=</code> memberikan nilai ke variabel, sedangkan <code>===</code> membandingkan nilai dan tipe data secara ketat.</li>
+        <li><strong>Kapan for cocok digunakan?</strong> Ketika jumlah pengulangan atau penghitungnya dapat ditentukan, misalnya mencetak angka 1 sampai 10.</li>
+        <li><strong>Manfaat fungsi dan return:</strong> Fungsi mengelompokkan instruksi agar dapat digunakan kembali. <code>return</code> mengembalikan hasil dari fungsi kepada pemanggilnya.</li>
+        <li><strong>Apa itu DOM?</strong> DOM adalah representasi dokumen HTML yang dapat diakses JavaScript untuk memilih dan mengubah elemen.</li>
+        <li><strong>Apa itu event listener?</strong> Mekanisme untuk menangani kejadian pengguna, misalnya <code>addEventListener("click", ...)</code> menjalankan fungsi ketika tombol diklik.</li>
+        <li><strong>Mengapa validasi diperlukan?</strong> Untuk mencegah data kosong atau tidak sesuai diproses dan memberikan pesan kesalahan yang jelas.</li>
+        <li><strong>Bagaimana memeriksa kesalahan JavaScript?</strong> Buka Developer Tools pada browser, pilih tab Console, baca kesalahan pertama, lalu periksa sintaks, nama variabel, ID elemen, dan nilai input.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>Praktikum Pemrograman Web 1 · Rekayasa Perangkat Lunak</footer>
+</body>
+</html>
