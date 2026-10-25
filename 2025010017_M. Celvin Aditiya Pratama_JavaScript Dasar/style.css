@@ -1,0 +1,27 @@
+* { box-sizing: border-box; }
+:root { font-family: Arial, Helvetica, sans-serif; color: #1d2939; background: #f3f6fb; }
+body { margin: 0; line-height: 1.6; }
+.hero { padding: 42px 20px; text-align: center; color: white; background: linear-gradient(135deg, #153e75, #2463a6); }
+.hero h1 { margin: 4px 0 8px; font-size: clamp(2rem, 5vw, 3rem); }
+.hero p { max-width: 760px; margin: 0 auto; }
+.eyebrow { font-size: .82rem; font-weight: 700; letter-spacing: .16em; }
+main { width: min(960px, calc(100% - 28px)); margin: 24px auto 42px; }
+.panel { background: white; border: 1px solid #dce4ef; border-radius: 14px; padding: 22px; margin: 18px 0; box-shadow: 0 4px 14px rgba(21, 62, 117, .05); }
+.panel h2 { margin-top: 0; color: #153e75; font-size: 1.3rem; }
+h3 { margin-bottom: 4px; }
+label { display: flex; flex-direction: column; gap: 6px; font-weight: 600; margin: 12px 0; }
+input, select { width: 100%; border: 1px solid #b8c5d6; border-radius: 8px; padding: 11px 12px; font: inherit; background: #fff; color: #1d2939; }
+input:focus, select:focus { outline: 2px solid #8bb9ed; border-color: #2463a6; }
+button { border: 0; border-radius: 8px; padding: 11px 16px; margin: 6px 6px 6px 0; font: inherit; font-weight: 700; color: white; background: #1d5fa7; cursor: pointer; }
+button:hover { background: #164b85; }
+button.secondary { background: #64748b; }
+button.secondary:hover { background: #475569; }
+.result { background: #f4f8fd; border-left: 4px solid #2463a6; border-radius: 6px; padding: 12px 14px; overflow-wrap: anywhere; }
+pre.result { white-space: pre-wrap; font: 0.94rem/1.6 Consolas, monospace; }
+.form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.highlight { border: 2px solid #8bb9ed; }
+.answers li { margin: 10px 0; padding-left: 4px; }
+code { background: #eaf0f7; padding: 2px 5px; border-radius: 4px; }
+footer { padding: 22px; text-align: center; color: #64748b; background: #e8eef6; }
+@media (max-width: 600px) { .panel { padding: 16px; } .form-grid { grid-template-columns: 1fr; gap: 0; } }
