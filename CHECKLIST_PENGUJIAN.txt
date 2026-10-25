@@ -1,0 +1,19 @@
+CHECKLIST PENGUJIAN PRAKTIKUM JAVASCRIPT DASAR
+
+1. Buka index.html di browser.
+2. Tekan tombol pada setiap bagian latihan.
+3. Buka Developer Tools (F12) > Console untuk memeriksa keluaran console.log().
+4. Mini-proyek Kalkulator Belanja:
+   - Nama produk: Buku, harga 20000, jumlah 2 -> subtotal Rp40.000, diskon Rp0, total Rp40.000.
+   - Nama produk: Buku, harga 50000, jumlah 2 -> subtotal Rp100.000, diskon Rp10.000, total Rp90.000.
+   - Nama kosong -> pesan semua kolom wajib diisi.
+   - Jumlah 0 -> pesan harga atau jumlah tidak valid.
+   - Harga -5000 -> pesan harga atau jumlah tidak valid.
+5. Pastikan tombol reset pada bagian DOM dan formulir pemesanan berfungsi.
+
+File:
+- index.html: halaman praktik
+- style.css: desain halaman
+- script.js: logika JavaScript
+- README.md: panduan penggunaan
+- CHECKLIST_PENGUJIAN.txt: skenario pengujian
